@@ -167,17 +167,6 @@ endif
 nnoremap <buffer> <silent>  ,=  :call CF3AlignAssignments("null")<CR>
 nnoremap <buffer> <silent>  <ESC>=  :call CF3AlignAssignments("vars")<CR>
 
-" For pasting code snippets
-function! Pastefile( FILE )
-        let arg_file = s:install_dir."/snippets/".a:FILE
-        let @" = join( readfile( arg_file ), "\n" )
-        put 
-        return ""
-endfunction
-
-nnoremap <buffer> ,k :call Pastefile("template.cf")<CR>kdd
-nnoremap <buffer> ,s :call Pastefile("stdlib.cf")<CR>kdd
-
 " TODO
 " Indents
 
